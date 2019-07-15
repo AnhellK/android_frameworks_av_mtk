@@ -587,7 +587,6 @@ audio_devices_t Engine::getDeviceForInputSource(audio_source_t inputSource) cons
     const DeviceVector &availableOutputDevices = mApmObserver->getAvailableOutputDevices();
     const DeviceVector &availableInputDevices = mApmObserver->getAvailableInputDevices();
     const SwAudioOutputCollection &outputs = mApmObserver->getOutputs();
-
     audio_devices_t availableDeviceTypes = availableInputDevices.types() & ~AUDIO_DEVICE_BIT_IN;
 
     uint32_t device = AUDIO_DEVICE_NONE;

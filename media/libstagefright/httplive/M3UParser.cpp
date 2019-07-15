@@ -326,7 +326,7 @@ bool M3UParser::itemAt(size_t index, AString *uri, sp<AMessage> *meta) {
     }
 
     if (uri) {
-       *uri = mItems.itemAt(index).makeURL(mBaseURI.c_str());
+        *uri = mItems.itemAt(index).makeURL(mBaseURI.c_str());
     }
 
     if (meta) {
@@ -432,7 +432,7 @@ bool M3UParser::getTypeURI(size_t index, const char *key, AString *uri) const {
     AString groupID;
     if (!meta->findString(key, &groupID)) {
         if (uri != NULL) {
-           *uri = mItems.itemAt(index).makeURL(mBaseURI.c_str());
+            *uri = mItems.itemAt(index).makeURL(mBaseURI.c_str());
         }
 
         AString codecs;
@@ -463,7 +463,7 @@ bool M3UParser::getTypeURI(size_t index, const char *key, AString *uri) const {
     // don't care about the active URI (or if there is an active one)
     if (uri != NULL) {
         sp<MediaGroup> group = mMediaGroups.valueFor(groupID);
-       if (!group->getActiveURI(uri, mBaseURI.c_str())) {
+        if (!group->getActiveURI(uri, mBaseURI.c_str())) {
             return false;
         }
 
@@ -560,7 +560,6 @@ AString M3UParser::MediaGroup::Media::makeURL(const char *baseURL) const {
     CHECK(MakeURL(baseURL, mURI.c_str(), &out));
     return out;
 }
-
 
 status_t M3UParser::parse(const void *_data, size_t size) {
     int32_t lineNo = 0;

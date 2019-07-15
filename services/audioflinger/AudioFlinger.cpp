@@ -3004,7 +3004,7 @@ sp<IEffect> AudioFlinger::createEffect(
                 io = mPlaybackThreads.keyAt(0);
             }
             ALOGV("createEffect() got io %d for effect %s", io, desc.name);
-         } else if (checkPlaybackThread_l(io) != nullptr) {
+        } else if (checkPlaybackThread_l(io) != nullptr) {
             // allow only one effect chain per sessionId on mPlaybackThreads.
             for (size_t i = 0; i < mPlaybackThreads.size(); i++) {
                 const audio_io_handle_t checkIo = mPlaybackThreads.keyAt(i);
@@ -3019,7 +3019,7 @@ sp<IEffect> AudioFlinger::createEffect(
                     goto Exit;
                 }
             }
-       }
+        }
         ThreadBase *thread = checkRecordThread_l(io);
         if (thread == NULL) {
             thread = checkPlaybackThread_l(io);

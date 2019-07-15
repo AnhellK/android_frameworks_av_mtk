@@ -591,5 +591,5 @@ bool NuPlayer::CCDecoder::CCTrack::operator!=(const NuPlayer::CCDecoder::CCTrack
     return compare(rhs) != 0;
 }
 
-}  // namespace androidd
+}  // namespace android
 
