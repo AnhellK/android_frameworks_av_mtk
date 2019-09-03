@@ -33,7 +33,7 @@ enum {
     HDCP_GET_CAPS,
     HDCP_ENCRYPT,
     HDCP_ENCRYPT_NATIVE,
-    HDCP_DECRYPT,
+    HDCP_DECRYPT
 };
 
 struct BpHDCPObserver : public BpInterface<IHDCPObserver> {

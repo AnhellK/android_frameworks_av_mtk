@@ -1,5 +1,5 @@
 LOCAL_PATH:= $(call my-dir)
-ifneq ($(strip $(BOARD_USES_MTK_HARDWARE)),true)
+#ifneq ($(strip $(BOARD_USES_MTK_HARDWARE)),true)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES:=                     \
@@ -21,4 +21,4 @@ LOCAL_SANITIZE := signed-integer-overflow
 LOCAL_MODULE:= libstagefright_color_conversion
 
 include $(BUILD_STATIC_LIBRARY)
-endif
+#endif
