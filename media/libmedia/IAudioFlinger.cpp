@@ -90,7 +90,7 @@ enum {
     SET_AUDIO_COMMAND,
     GET_AUDIO_COMMAND,
     SET_AUDIO_DATA,
-    GET_AUDIO_DATA
+    GET_AUDIO_DATA,
 #endif
 };
 

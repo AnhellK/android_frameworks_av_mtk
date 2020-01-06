@@ -66,7 +66,7 @@ enum {
     GET_PARAMETER,
     SET_RETRANSMIT_ENDPOINT,
     GET_RETRANSMIT_ENDPOINT,
-    SET_NEXT_PLAYER
+    SET_NEXT_PLAYER,
 };
 
 class BpMediaPlayer: public BpInterface<IMediaPlayer>
